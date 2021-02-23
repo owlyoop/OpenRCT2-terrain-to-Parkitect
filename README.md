@@ -22,3 +22,4 @@ TODO: I think the land ownership is bugged
 8. Right at the end of the height data should be the "landPatchOwnerships" block. Do the same thing for that data
 9. Right at the end of the ownership data should be the "LandPatchTerrainTypes" block. Do the same thing for that data.
 10. Open the .scenario file in 7zip, drag and drop the edited .file to overwrite the one inside the .scenario archive.
+11. Open the scenario in Parkitect and hope everything works!
