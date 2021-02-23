@@ -24,3 +24,12 @@ TODO: I think the land ownership is bugged
 9. Right at the end of the ownership data should be the "LandPatchTerrainTypes" block. Do the same thing for that data.
 10. Open the .scenario file in 7zip, drag and drop the edited .file to overwrite the one inside the .scenario archive.  ![Overwriting with 7zip](exporter7.png)
 11. Open the scenario in Parkitect and hope everything works!  ![TrinityIslands](exporter8.jpg)
+
+Be sure to delete the old entrance and guest spawn and delivery zone from Step 4
+
+You may have noticed the texture surfaces aren't imported. LandPatchTerrainTypes seems to only refer to the edges/walls of terrain. 
+"terrainTextures" from the parkitect file seems to be the actual surfaces. Parkitect's surfaces are way more complex, and I could not figure out how to decode the data. It does not seem worth the effort to do so
+
+Paths and scenery is also not imported. Despite beign realitvely easy to understand in the parkitect file, paths have a "decoResultScore": that seems to be calculated when you place the path and scenery. I opted not to bother importing paths because I do not know if the value would be recalculated when I load the scenario with imported paths
+
+Scenery is another beast, but I only would have imported trees. I decided not to because RCT scenarios have a bunch of tree sprites and I think having the tree placement be 1:1 would impact performance too much with the polycounts. Plus RCT has way more trees than Parkitect, most trees don't fit in a single tile, and alot of the Parkitect trees are DLC
