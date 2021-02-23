@@ -1,4 +1,4 @@
-///reference path = "D:\Users\TreyHDD\games\OpenRCT2\OpenRCT2-develop\OpenRCT2-develop\distribution\openrct2.d.ts" />
+/// <reference path = "D:\Users\TreyHDD\games\OpenRCT2\OpenRCT2-develop\OpenRCT2-develop\distribution\openrct2.d.ts" />
 
 
 //parkitect's max terrain height is 32 (64 high in openrct2), but in most scenarios the terrain should fit
@@ -66,7 +66,7 @@ var terrainExport = function()
                     var index = (( ((map.size.x - 3) - (x)) + ((map.size.y - 2) * (y)) ) * 4);
                     var ownershipDataIndex = (( ((map.size.x - 3) - (x)) + ((map.size.y - 2) * (y)) ) * 2);
                     var terrainTypeIndex = ( ((map.size.x - 3) - (x)) + ((map.size.y - 2) * (y)) );
-                    
+
                     buildParkitectHeightData(index, element.baseHeight, element.slope);
                     buildParkitectOwnershipData(ownershipDataIndex, element.ownership);
                     buildParkitectTerrainTypeData(terrainTypeIndex, element.surfaceStyle);
@@ -83,7 +83,7 @@ var terrainExport = function()
     var ownershipFinish = base64ArrayBuffer(ownershipData);
     var terrainTypeFinish = base64ArrayBuffer(combinePrefixAndDataBytes((map.size.x - 2) * ( map.size.y - 2), terrainTypeData));
 
-    console.log("Map size is " + (map.size.x - 2) + " by " + (map.size.y - 2));
+    console.log(scenario.name + " map size is " + (map.size.x - 2) + " by " + (map.size.y - 2));
     console.log("**********Height Data**********");
     console.log(heightDataFinish);
     console.log("******************************");
@@ -224,21 +224,25 @@ function buildParkitectOwnershipData(index, value)
 {
     var parkitectValue = 0;
 
-    if (value == 0) //unobtainable land
+    if (value === 0) //unobtainable land
     {
         parkitectValue = 0;
     }
-    else if (value == 16 || value == 64) //construction rights. parkitect doesn't have "construction rights for sale"
+    else if (value === 16 || value === 64) //construction rights. parkitect doesn't have "construction rights for sale"
     {
         parkitectValue = 3;
     }
-    else if (value == 32) //owned land
+    else if (value === 32) //owned land
     {
         parkitectValue = 1;
     }
-    else //land for sale (value is 128)
+    else if (value === 128) //land for sale (value is 128)
     {
         parkitectValue = 2;
+    }
+    else
+    {
+        parkitectValue = 1;
     }
 
     ownershipData[index] = 8;
