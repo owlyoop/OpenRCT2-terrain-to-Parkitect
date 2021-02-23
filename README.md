@@ -14,9 +14,9 @@ This is not very user friendly. Follow these steps. You will need 7zip and prefe
   -Save and quit the scenario
 5. Go to your Parkitect scenarios folder. Should be in "Documents\Parkitect\Saves\Scenarios". Open the .SCENARIO file with 7zip and extract the file inside that archive. Should just be a single "File" file.
 6. Open the file and the exported data file in Notepad++ (Turn on word wrap for sanity's sake). In the parkitect file, Ctrl+F for "landPatchHeights".  \
-  -You should see something like "xSize":126,"ySize":126,"zSize":4,"data": \  ![Find landPatchHeights](exporter6.png)
+  -You should see something like "xSize":126,"ySize":126,"zSize":4,"data": \  ![Find landPatchHeights](exporter4.png)
   -After "data": is hundreds of characters surrounded by quotation marks. Select them all, then delete. You can double click to quickly select them all  ![Selecting the data](exporter5.png)
-7. Go to your exported data file. Under "Height Data" is the data parkitect can read. Copy and paste the new data to where the old data was.
+7. Go to your exported data file. Under "Height Data" is the data parkitect can read. Copy and paste the new data to where the old data was. ![Deleted Data](exporter6.png)
   - (Sometimes the data ends in a '==' and double clicking doesn't select those characters, like in the pictures)
 8. Right at the end of the height data should be the "landPatchOwnerships" block. Do the same thing for that data
 9. Right at the end of the ownership data should be the "LandPatchTerrainTypes" block. Do the same thing for that data.
