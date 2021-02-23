@@ -312,7 +312,7 @@ function clamp(num, min, max)
     return Math.min(Math.max(num, min), max);
 }
 
-//Forgot where I found this code on github
+//Got this code from here: https://gist.github.com/jonleighton/958841
 function base64ArrayBuffer(arrayBuffer) {
     var base64    = ''
     var encodings = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
