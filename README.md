@@ -2,8 +2,9 @@
 OpenRCT2 plugin to export the scenario's terrain data into Parkitect
 
 Currently exports the height data, land ownership, and terrain types. Tested with OpenRCT2 v0.3.2
-
+This is my first time ever touching Javascript and also making an OpenRCT2 plugin
 This is not very user friendly. Follow these steps. You will need 7zip and preferably Notepad++
+
 
 TODO: I think the land ownership is bugged
 
