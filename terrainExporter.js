@@ -1,4 +1,4 @@
-/// <reference path = "D:\Users\TreyHDD\games\OpenRCT2\OpenRCT2-develop\OpenRCT2-develop\distribution\openrct2.d.ts" />
+///reference path = "D:\Users\TreyHDD\games\OpenRCT2\OpenRCT2-develop\OpenRCT2-develop\distribution\openrct2.d.ts" />
 
 
 //parkitect's max terrain height is 32 (64 high in openrct2), but in most scenarios the terrain should fit
